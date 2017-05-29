@@ -27,7 +27,7 @@ module.exports.attach = function (broker) {
     pubClient.publish(channel, data);
   });
   
-  var instanceIdRegex = /^[^\/]*\//;
+  var instanceIdRegex = /^[a-z0-9-]*\//;
   
   subClient.on('message', function (channel, message) {
     var sender = null;
